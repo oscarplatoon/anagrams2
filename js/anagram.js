@@ -9,4 +9,5 @@ const anagram = (word, listOfWords) => {
     // return result;
   return result;
 }
+
 module.exports = anagram;
