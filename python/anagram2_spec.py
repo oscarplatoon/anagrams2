@@ -1,8 +1,23 @@
-# Can you translate this driver code to unit tests?
+import unittest
 
-from anagram2 import anagrams_for 
+from anagram2 import anagrams_for
 
-list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"]
+class TestAnagram(unittest.TestCase):
 
-print(anagrams_for("threads", list_of_words) == ["threads", "trashed", "hardest", "hatreds"])
-print(anagrams_for("apple", list_of_words) == [])
+    """
+    When you call anagrams_for you get a list back:
+    """
+
+    def test_returns_a_list(self):
+        list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"]
+        self.assertTrue(type(anagrams_for("threads", list_of_words)) == list)
+
+    def test_anagram_function(self):
+        list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"]
+        
+        self.assertTrue(anagrams_for("threads", list_of_words) == ["threads", "trashed", "hardest", "hatreds"])
+
+        self.assertTrue(anagrams_for("apple", list_of_words) == [])
+
+if __name__ == '__main__':
+    unittest.main()
