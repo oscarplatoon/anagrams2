@@ -21,5 +21,8 @@ class TestAnagram(unittest.TestCase):
 
         self.assertTrue(anagrams_for("apple", list_of_words) == [])
 
+    def test_function_with_no_arguments(self):
+        self.assertTrue(anagrams_for() == [])
+
 if __name__ == '__main__':
     unittest.main()
