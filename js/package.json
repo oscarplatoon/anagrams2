@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "jest": "^27.0.3"
+  },
+  "name": "js",
+  "version": "1.0.0",
+  "main": "anagram2.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
