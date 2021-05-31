@@ -17,9 +17,13 @@ class TestAnagram(unittest.TestCase):
     def test_anagram_function(self):
         list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"]
         
+        list_of_numbers = ["3141", "1432", "1743", "31415"]
+        
         self.assertTrue(anagrams_for("threads", list_of_words) == ["threads", "trashed", "hardest", "hatreds"])
 
         self.assertTrue(anagrams_for("apple", list_of_words) == [])
+
+        self.assertTrue(anagrams_for("1234", list_of_numbers) == ["1432"])
 
     """
     When you call the function with no arguments, you get a blank array back.
