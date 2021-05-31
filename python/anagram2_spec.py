@@ -7,11 +7,13 @@ class TestAnagram(unittest.TestCase):
     """
     When you call anagrams_for you get a list back:
     """
-
     def test_returns_a_list(self):
         list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"]
         self.assertTrue(type(anagrams_for("threads", list_of_words)) == list)
-
+    
+    """
+    When you call anagrams_for you get correct answers:
+    """
     def test_anagram_function(self):
         list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"]
         

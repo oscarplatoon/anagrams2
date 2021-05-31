@@ -1,6 +1,6 @@
 from character_match import is_character_match
 
-def anagrams_for(word, list_of_words):
+def anagrams_for(word = " ", list_of_words = []):
     output = []
 
     for item in list_of_words:
@@ -8,6 +8,3 @@ def anagrams_for(word, list_of_words):
             output.append(item)
 
     return output
-
-
-print(anagrams_for("saltier", ["cognac", "saltier", "realist", "retails"]))
