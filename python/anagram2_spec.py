@@ -1,8 +1,20 @@
-# Can you translate this driver code to unit tests?
+import unittest
+from anagram2 import anagrams_for
 
-from anagram2 import anagrams_for 
+class AnagramsTest(unittest.TestCase):
+    '''Test for anagram2.py'''
 
-list_of_words = ["threads", "trashed", "hardest", "hatreds", "hounds"]
+    def test_type(self):
+        self.assertEqual(type(anagrams_for("saltier", ["cognac", "saltier", "realist", "retails"])),list)
 
-print(anagrams_for("threads", list_of_words) == ["threads", "trashed", "hardest", "hatreds"])
-print(anagrams_for("apple", list_of_words) == [])
+    def test_1(self):
+        self.assertEqual(anagrams_for("saltier", ["cognac", "saltier", "realist", "retails"]),["saltier", "realist", "retails"])
+
+    def test_2(self):
+        self.assertEqual(anagrams_for("threads", ["threads", "trashed", "hardest", "hatreds", "hounds"]),["threads", "trashed", "hardest", "hatreds"])
+
+    def test_3(self):
+        self.assertEqual(anagrams_for("apple", ["threads", "trashed", "hardest", "hatreds", "hounds"]),[])
+
+if __name__=='__main__':
+    unittest.main()
